@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import HeaderMenu from './HeaderMenu';
+import MenuTop from './MenuTop';
 import {
     Link
 } from "react-router-dom";
@@ -25,6 +26,7 @@ const Header: React.FC = () => {
 
                 <HeaderMenu/>
             </div>
+            <MenuTop/>
         </div>
     );
 }

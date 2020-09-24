@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-import MenuTop from './components/menuTop/MenuTop';
 import Header from './components/header/Header';
 import Promotions from './components/promotions/Promotions';
 
@@ -17,7 +16,6 @@ const App: React.FC = () => {
     <div className="App">
       <Router>
           <Header/> 
-          <MenuTop/>
 
           <section className="app__content">
             <Switch>
