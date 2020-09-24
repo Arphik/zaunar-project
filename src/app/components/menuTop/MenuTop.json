@@ -1,0 +1,482 @@
+
+{
+    "categories":[
+            {
+                "name": "Category1",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category2",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category3",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category4",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category5",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category6",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category7",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "links": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "links": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "links": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            }
+    ]
+    
+}

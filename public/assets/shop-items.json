@@ -1,0 +1,258 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "ASUS GeForce RTX 2080 Ti ROG STRIX OC 11GB GDDR6",
+      "shortStats": "Układ: Geforce RTX2080 Ti Pamięć: 11 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 2 szt., DisplayPort - 2 szt., USB-C",
+      "vram": 11,
+      "image": "./rtx2080tiasus.jpg",
+      "price": 5699,
+      "gpumodel": 0,
+      "producer": 0,
+      "memorytype": 1
+    },
+    {
+      "id": 2,
+      "title": "MSI GeForce RTX 2080 GAMING X TRIO 8GB GDDR6",
+      "shortStats": "Układ: Geforce RTX2080 Pamięć: 8 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DisplayPort - 3 szt., USB-C",
+      "vram": 8,
+      "image": "assets/shop/rtx2080msi.jpg",
+      "price": 3729,
+      "gpumodel": 1,
+      "producer": 1,
+      "memorytype": 1
+    },
+    {
+      "id": 3,
+      "title": "Gigabyte GeForce RTX 2070 GAMING OC WHITE 8G GDDR6",
+      "shortStats": "Układ: Geforce RTX2070 Pamięć: 8 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DisplayPort - 3 szt., USB-C",
+      "vram": 8,
+      "image": "assets/shop/rtx2070gigabyte.jpg",
+      "price": 2499.00,
+      "gpumodel": 2,
+      "producer": 2,
+      "memorytype": 1
+    },
+    {
+      "id": 4,
+      "title": "EVGA GeForce RTX 2060 XC Black Gaming 6GB GDDR6",
+      "shortStats": "Układ: Geforce RTX2080 Ti Pamięć: 6 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DVI - 1 szt., DisplayPort - 1 szt.",
+      "vram": 6,
+      "image": "assets/shop/rtx2060evga.jpg",
+      "price": 1699.00,
+      "gpumodel": 3,
+      "producer": 3,
+      "memorytype": 1
+    },
+    {
+      "id": 5,
+      "title": "XFX Radeon RX 590 Fatboy OC+ 8GB GDDR5",
+      "shortStats": "Układ:Radeon RX 590 Pamięć:8 GB Rodzaj pamięci:GDDR5 Złącza:HDMI - 1 szt., DVI - 1 szt., DisplayPort - 3 szt.",
+      "vram": 8,
+      "image": "assets/shop/xfxrx590.jpg",
+      "price": 1139.00,
+      "gpumodel": 9,
+      "producer": 4,
+      "memorytype": 0
+    },
+    {
+      "id": 6,
+      "title": "Gigabyte GeForce GTX 1660 OC 6GB GDDR5",
+      "shortStats": "Układ: GeForce GTX 1660 Pamięć: 6 GB Rodzaj pamięci: GDDR5 Złącza: HDMI - 1 szt., DisplayPort - 3 szt.",
+      "vram": 6,
+      "image": "assets/shop/gtx1660gigabyteoc.jpg",
+      "price": 1025.00,
+      "gpumodel": 10,
+      "producer": 2,
+      "memorytype": 0
+    },
+    {
+      "id": 7,
+      "title": "MSI GeForce RTX 2060 GAMING Z 6GB GDDR6",
+      "shortStats": "Układ: GeForce RTX 2060 Pamięć: 6 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DisplayPort - 3 szt.",
+      "vram": 6,
+      "image": "assets/shop/rtx2060msigamingz.jpg",
+      "price": 1719.00,
+      "gpumodel": 4,
+      "producer": 1,
+      "memorytype": 1
+    },
+    {
+      "id": 8,
+      "title": "Gigabyte GeForce GTX 1660 Ti OC 6GB GDDR6",
+      "shortStats": "Układ: GeForce GTX 1660 Ti Pamięć: 6 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DisplayPort - 3 szt.",
+      "vram": 6,
+      "image": "assets/shop/gtx1660gigabyteoc.jpg",
+      "price": 1289.00,
+      "gpumodel": 11,
+      "producer": 2,
+      "memorytype": 1
+    },
+    {
+      "id": 9,
+      "title": "Gainward GeForce RTX 2070 SUPER Phantom GS 8GB GDDR6",
+      "shortStats": "Układ: GeForce RTX 2070 SUPER Pamięć: 8 GB Rodzaj pamięci: GDDR6 Złącza: HDMI - 1 szt., DisplayPort - 3 szt.",
+      "vram": 8,
+      "image": "assets/shop/rtx2070sgainward.jpg",
+      "price": 2549.00,
+      "gpumodel": 12,
+      "producer": 5,
+      "memorytype": 1
+    },
+    {
+      "id": 10,
+      "title": "MSI GeForce RTX 2080 Ti GAMING X TRIO 11GB GDDR6",
+      "shortStats": "Układ:GeForce RTX 2080 Ti Pamięć:11 GB Rodzaj pamięci:GDDR6 Złącza:HDMI - 1 szt., DisplayPort - 3 szt., USB-C",
+      "vram": 11,
+      "image": "assets/shop/rtx2080timsi.jpg",
+      "price": 5629.00,
+      "gpumodel": 0,
+      "producer": 1,
+      "memorytype": 1
+    },
+    {
+      "id": 11,
+      "title": "Gigabyte GeForce RTX 2080 Ti AORUS XTREME 11GB GDDR6",
+      "shortStats": "Układ:GeForce RTX 2080 Ti Pamięć:11 GB Rodzaj pamięci:GDDR6 Złącza:HDMI - 3 szt., DisplayPort - 3 szt., USB-C",
+      "vram": 11,
+      "image": "assets/shop/rtx2080tigigabyte.jpg",
+      "price": 5799.00,
+      "gpumodel": 0,
+      "producer": 2,
+      "memorytype": 1
+    },
+    {
+      "id": 12,
+      "title": "EVGA GeForce RTX 2080 Ti FTW3 ULTRA GAMING 11GB GDDR6",
+      "shortStats": "Układ:GeForce RTX 2080 Ti Pamięć:11 GB Rodzaj pamięci:GDDR6 Złącza:HDMI - 1 szt., DisplayPort - 3 szt., USB-C",
+      "vram": 11,
+      "image": "assets/shop/rtx2080tievga.jpg",
+      "price": 6999.00,
+      "gpumodel": 0,
+      "producer": 3,
+      "memorytype": 1
+    },
+    {
+      "id": 13,
+      "title": "MSI GeForce GTX 1650 GAMING X 4GB GDDR5",
+      "shortStats": "Układ::GeForce GTX 1650 Pamięć::4 GB Rodzaj pamięci::GDDR5 Złącza::HDMI - 1 szt., DisplayPort - 2 szt.",
+      "vram": 4,
+      "image": "assets/shop/rtx2080tievga.jpg",
+      "price": 739.00,
+      "gpumodel": 13,
+      "producer": 1,
+      "memorytype": 0
+    }
+  ],
+  "gpu-stats": [
+    {
+      "id": 0,
+      "title": "Producenci",
+      "name" : "producer",
+      "names": 
+      [
+        {
+          "t": "Asus",
+          "selected": false
+        },
+        {
+          "t": "MSI",
+          "selected": false
+        },
+        {
+          "t": "Gigabyte",
+          "selected": false
+        },
+        {
+          "t": "EVGA",
+          "selected": false
+        },
+        {
+          "t": "XFX",
+          "selected": false
+        },
+        {
+          "t": "Gainward", 
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Układ graficzny",
+      "name" : "gpumodel",
+      "names": 
+      [
+        {
+          "t": "RTX 2080 TI",
+          "selected": false
+        },
+        {
+          "t": "RTX 2080",
+          "selected": false
+        },
+        {
+          "t": "RTX 2070",
+          "selected": false
+        },
+        {
+          "t": "RTX 2060",
+          "selected": false
+        },
+        {
+          "t": "GTX 1080 TI",
+          "selected": false
+        },
+        {
+          "t": "GTX 1080",
+          "selected": false
+        },
+        {
+          "t": "GTX 1070 Ti",
+          "selected": false
+        },
+        {
+          "t": "GTX 1070",
+          "selected": false
+        },
+        {
+          "t": "GTX 1060",
+          "selected": false
+        },
+        {
+          "t": "RX 590",
+          "selected": false
+        },
+        {
+          "t": "GTX 1660",
+          "selected": false
+        },
+        {
+          "t": "GTX 1660Ti",
+          "selected": false
+        },
+        {
+          "t": "RTX 2070 Super",
+          "selected": false
+        },
+        {
+          "t": "GTX 1650",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rodzaj pamięci",
+      "name": "memorytype",
+      "names": [
+        {
+          "t": "GDDR5"
+        },
+        {
+          "t": "GDDR6"
+        }
+      ]
+    }
+  ]
+}
