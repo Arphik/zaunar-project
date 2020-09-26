@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 import Header from './components/header/Header';
 import Promotions from './components/promotions/Promotions';
@@ -18,6 +18,7 @@ const App: React.FC = () => {
           <Header/> 
 
           <section className="app__content">
+            <div className="gray-cover"></div>
             <Switch>
               <Route path="/" exact>
                 <Promotions/>

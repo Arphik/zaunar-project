@@ -7,7 +7,7 @@ import SmallBricksView from './views/SmallBricksView';
 import LargeListView from './views/LargeListView';
 import SmallListView from './views/SmallListView';
 import { DataOperations } from './filter/DataOperations';
-import { IGpusModel, IItem } from './views/gpus.model';
+import { IGpusModel } from './views/gpus.model';
 
 interface ItemsListState {
   data: IGpusModel;

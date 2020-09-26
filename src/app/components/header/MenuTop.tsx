@@ -10,9 +10,19 @@ import Menu from './MenuTop.json';
 const MenuTop: React.FC = () => {
 
     // console.log(Menu);
+
+    const grayOutContent = (choice: boolean) => {
+        console.log("CHANGE");
+        if(choice){
+            document.querySelector('.gray-cover')?.setAttribute('style', 'display: block;')
+        }else{
+            document.querySelector('.gray-cover')?.setAttribute('style', 'display: none;');
+        }
+    }
+
     const categories = Menu.categories.map((category, index) => (
         
-            <div className="menu-top__category--btn" key={index}>
+            <div className="menu-top__category--btn" key={index} onMouseEnter={() => grayOutContent(true)} onMouseLeave={() => grayOutContent(false)}>
                 {category.name}
                 <ul className="menu-top__subcategories">
                     {category.subcats.map((subcat, index) => (   
