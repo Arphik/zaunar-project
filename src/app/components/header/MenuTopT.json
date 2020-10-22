@@ -1,0 +1,122 @@
+
+{
+    "categories":[
+            {
+                "name": "Podzespoły komputerowe",
+                "subcats": [
+                            {
+                                "name": "Karty graficzne",
+                                "subcatlinks": [
+                                    {
+                                        "name": "Wejdź do kategorii",
+                                        "url": "search"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "subcatlinks": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            },
+            {
+                "name": "Category2",
+                "subcats": [
+                            {
+                                "name": "SubCategory1",
+                                "subcatlinks": [
+                                    {
+                                        "name": "Kat1Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat1Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat1Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat1Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory2",
+                                "subcatlinks": [
+                                    {
+                                        "name": "Kat2Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat2Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat2Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat2Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SubCategory3",
+                                "subcatlinks": [
+                                    {
+                                        "name": "Kat3Link1",
+                                        "url": "link1"
+                                    },
+                                    {
+                                        "name": "Kat3Link2",
+                                        "url": "link2"
+                                    },
+                                    {
+                                        "name": "Kat3Link3",
+                                        "url": "link3"
+                                    },
+                                    {
+                                        "name": "Kat3Link4",
+                                        "url": "link4"
+                                    }
+                                ]
+                            }
+                        ]
+            }
+            
+    ]
+    
+}

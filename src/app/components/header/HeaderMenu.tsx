@@ -15,26 +15,26 @@ const HeaderMenu: React.FC = () => {
                 <Link to="" className="header__link">
                     <div className="header__link-content">
                         <FontAwesomeIcon className="header__link--icon" icon={faHeadset} />
-                        <span className="header____link--text">Pomoc i kontakt</span>
+                        <span className="header__link--text">Pomoc i kontakt</span>
                     </div>
                 </Link>
                 <span className="header__separator"></span>
-                <Link to="" className="header__link">
+                <Link to="panel" className="header__link">
                     <div className="header__link-content">
                         <FontAwesomeIcon icon={faUser} />
-                        <span className="header____link--text">Twoje konto</span>
+                        <span className="header__link--text">Twoje konto</span>
                     </div>
                 </Link>
                 <Link to="" className="header__link">
                     <div className="header__link-content">
                         <FontAwesomeIcon icon={faHeart} />
-                        <span className="header____link--text">Twoje listy</span>
+                        <span className="header__link--text">Twoje listy</span>
                     </div>
                 </Link>
                 <Link to="" className="header__link">
                     <div className="header__link-content">
                         <FontAwesomeIcon icon={faShoppingCart} />
-                        <span className="header____link--text">Koszyk</span>
+                        <span className="header__link--text">Koszyk</span>
                     </div>
                 </Link>
             </nav>

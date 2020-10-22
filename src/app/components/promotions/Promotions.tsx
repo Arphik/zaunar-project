@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react';
 import './Promotions.scss';
 
+// import {} from '@fortawesome/fontawesome-svg-core'
+// import {} from 'font'
+// import {} from '@fortawesome/fontawesome-svg-core'
+
 const Promotions: React.FC = () => {
 
     const [promotionIndex, setPromIndex] = useState<number>(0);

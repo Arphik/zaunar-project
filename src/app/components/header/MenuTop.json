@@ -2,14 +2,14 @@
 {
     "categories":[
             {
-                "name": "Category1",
+                "name": "Podzespoły komputerowe",
                 "subcats": [
                             {
-                                "name": "SubCategory1",
-                                "links": [
+                                "name": "Karty graficzne",
+                                "subcatlinks": [
                                     {
-                                        "name": "Kat1Link1",
-                                        "url": "link1"
+                                        "name": "Wejdź do kategorii",
+                                        "url": "search"
                                     },
                                     {
                                         "name": "Kat1Link2",
@@ -27,7 +27,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -48,7 +48,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -74,7 +74,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -95,7 +95,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -116,7 +116,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -142,7 +142,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -163,7 +163,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -184,7 +184,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -210,7 +210,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -231,7 +231,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -252,7 +252,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -278,7 +278,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -299,7 +299,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -320,7 +320,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -346,7 +346,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -367,7 +367,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -388,7 +388,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"
@@ -414,7 +414,7 @@
                 "subcats": [
                             {
                                 "name": "SubCategory1",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat1Link1",
                                         "url": "link1"
@@ -435,7 +435,7 @@
                             },
                             {
                                 "name": "SubCategory2",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat2Link1",
                                         "url": "link1"
@@ -456,7 +456,7 @@
                             },
                             {
                                 "name": "SubCategory3",
-                                "links": [
+                                "subcatlinks": [
                                     {
                                         "name": "Kat3Link1",
                                         "url": "link1"

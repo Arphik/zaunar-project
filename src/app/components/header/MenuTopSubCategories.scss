@@ -1,0 +1,44 @@
+
+.menu-top__subcategories--container{
+    width: 600px;
+    min-height: 500px;
+    margin: 0;
+    padding: 15px 0 5px 0;
+    position: absolute; top: 100%;
+    list-style: none;
+    display: none;
+    box-shadow: 0 3px .6em rgb(233, 233, 233);
+    border-radius: 0 10px 10px 10px;
+    
+    z-index: 1;
+}
+
+.subcat--right{
+    left: 0;
+    border-radius: 0 10px 10px 10px;
+}
+
+.subcat--left{
+    right: 0;
+    border-radius: 10px 0 10px 10px;
+}
+
+.menu-top__subcategory--li{
+    width: 50%;
+    height: 40px;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background: rgba(0, 0, 0, 0.05);
+        z-index: 3;
+    }
+    &:hover > .menu-top__subcategories--links{
+        display: block;
+        z-index: 3;
+    }
+    z-index: 2;
+}

@@ -11,7 +11,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Header: React.FC = () => {
     return (
-        <div className="header">
+        <header className="header">
+
             <div className="header__container">
                 <Link to="./" className="header__logo">LOGO</Link>
 
@@ -25,9 +26,11 @@ const Header: React.FC = () => {
                 </div>
 
                 <HeaderMenu/>
+                
             </div>
+
             <MenuTop/>
-        </div>
+        </header>
     );
 }
 

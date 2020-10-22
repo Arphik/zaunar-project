@@ -6,45 +6,35 @@ import {
 import './MenuTop.scss';
 
 import Menu from './MenuTop.json';
+import MenuTopCategory from './MenuTopCategory';
 
-const MenuTop: React.FC = () => {
+export interface SubCatLink{
+    name: string,
+    url: string
+}
+
+export interface SubCat{
+    name: string,
+    subcatlinks: SubCatLink[]
+}
+
+export interface Category{
+    name: string,
+    subcats: SubCat[]
+}
+
+export interface IMenuTop{
+    Menu: Category
+}
+
+const MenuTop = () => {
 
     // console.log(Menu);
-
-    const grayOutContent = (choice: boolean) => {
-        console.log("CHANGE");
-        if(choice){
-            document.querySelector('.gray-cover')?.setAttribute('style', 'display: block;')
-        }else{
-            document.querySelector('.gray-cover')?.setAttribute('style', 'display: none;');
-        }
-    }
-
-    const categories = Menu.categories.map((category, index) => (
-        
-            <div className="menu-top__category--btn" key={index} onMouseEnter={() => grayOutContent(true)} onMouseLeave={() => grayOutContent(false)}>
-                {category.name}
-                <ul className="menu-top__subcategories">
-                    {category.subcats.map((subcat, index) => (   
-                        <li className="menu-top__categories--link" key={index}>
-                            {subcat.name}
-                            <div className="menu-top__subcategories--content" key={index}>
-                                {subcat.links.map((link, index) => (
-                                    <div className="subcategory__link" key={index}>
-                                        <Link to={`/${link.url}`}>{link.name}</Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-    ));
 
     return (
         <Router>
         <nav className="menu-top">
-            {categories}
+            <MenuTopCategory categories={Menu.categories}/>
         </nav>
         </Router>
     );
