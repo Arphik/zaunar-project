@@ -1,7 +1,7 @@
 import React from 'react';
 import './LargeBricksView.scss';
 import { Link } from "react-router-dom";
-import {IGpusModel, IItem} from './gpus.model';
+import { IGpusModel, IItem } from './gpus.model';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 

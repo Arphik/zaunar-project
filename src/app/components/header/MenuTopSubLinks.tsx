@@ -15,7 +15,7 @@ const MenuTopSubLinks = ({subcatlinks}: Props) => {
     return (
         <div className="menu-top__subcategories--links">
             {subcatlinks.map(({name, url}, index) => (
-                <Link to={`./${url}`} className="menu-top__subcategories--link" key={index}>
+                <Link to={url} className="menu-top__subcategories--link" key={index}>
                     {name}
                 </Link>
             ))}

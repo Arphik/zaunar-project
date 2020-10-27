@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react';
 import './Promotions.scss';
 
-// import {} from '@fortawesome/fontawesome-svg-core'
-// import {} from 'font'
-// import {} from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Promotions: React.FC = () => {
 
@@ -24,8 +23,12 @@ const Promotions: React.FC = () => {
 
     return (
         <div className="promotions">
-            <span className="promotions__button--left" onClick={() => setPromIndex(changePromotion(promotionIndex-1))}>&lt;</span>
-            <span className="promotions__button--right" onClick={() => setPromIndex(changePromotion(promotionIndex+1))}>&gt;</span>
+            <span className="promotions__button--left" onClick={() => setPromIndex(changePromotion(promotionIndex-1))}>
+                <FontAwesomeIcon icon={faArrowLeft}/>
+            </span>
+            <span className="promotions__button--right" onClick={() => setPromIndex(changePromotion(promotionIndex+1))}>
+                <FontAwesomeIcon icon={faArrowRight}/>
+            </span>
             <div className="promotions__banners--container">
                 <div className="banners" ref={bannersRef}>
                     <span className="banner"><p className="promotions__title">Banner 1</p></span>

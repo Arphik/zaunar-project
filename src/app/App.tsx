@@ -14,16 +14,20 @@ import Panel from './components/panel/Panel';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-          <Header/> 
+    <Router>
+      <div className="App">
+            <Header/> 
 
-          <main className="app__content">
-            <div className="gray-cover"></div>
-              <Route path="/" exact component={Promotions}/>
-              <Route path="/search" component={ItemsList}/>
-              <Route path="/panel" component={Panel}/>
-          </main>
-    </div>
+            <main className="app__content">
+              <div className="gray-cover"></div>
+              <Switch>
+                <Route path="/" exact component={Promotions}/>
+                <Route path="/search" component={ItemsList}/>
+                <Route path="/panel" component={Panel}/>
+              </Switch>
+            </main>
+      </div>
+    </Router>
   );
 }
 
