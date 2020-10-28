@@ -14,7 +14,6 @@ import Panel from './components/panel/Panel';
 
 const App: React.FC = () => {
   return (
-    <Router>
       <div className="App">
             <Header/> 
 
@@ -25,9 +24,17 @@ const App: React.FC = () => {
                 <Route path="/search" component={ItemsList}/>
                 <Route path="/panel" component={Panel}/>
               </Switch>
+                {/* <Route path="/">
+                  <Promotions/>
+                </Route>
+                <Route path="/">
+                  <ItemsList/>
+                </Route>
+                <Route path="/panel">
+                  <Panel/>
+                </Route> */}
             </main>
       </div>
-    </Router>
   );
 }
 

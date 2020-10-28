@@ -32,11 +32,9 @@ const MenuTop = () => {
     // console.log(Menu);
 
     return (
-        <Router>
         <nav className="menu-top">
             <MenuTopCategory categories={Menu.categories}/>
         </nav>
-        </Router>
     );
 }
 

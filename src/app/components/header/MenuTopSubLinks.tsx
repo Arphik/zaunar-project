@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Link
+  NavLink
 } from "react-router-dom";
 import './MenuTopSubLinks.scss';
 import { SubCatLink } from './MenuTop';
@@ -15,9 +14,9 @@ const MenuTopSubLinks = ({subcatlinks}: Props) => {
     return (
         <div className="menu-top__subcategories--links">
             {subcatlinks.map(({name, url}, index) => (
-                <Link to={url} className="menu-top__subcategories--link" key={index}>
+                <NavLink to={url} className="menu-top__subcategories--link" key={index}>
                     {name}
-                </Link>
+                </NavLink>
             ))}
         </div>
     );
