@@ -1,0 +1,31 @@
+.panel__menu{
+    width: 90%;
+    min-height: 60px;
+    padding: 10px;
+    margin: 40px auto;
+    background: rgb(52, 115, 231);
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.panel__link{
+    width: 18%;
+    margin: 0 1%;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        color: rgb(52, 115, 231);
+        background: white;
+    }
+}
+
+.active{
+    color: rgb(52, 115, 231);
+    background: white;
+}

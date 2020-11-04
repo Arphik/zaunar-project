@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <header className="header">
 
             <div className="header__container">
-                <Link to="./" className="header__logo">LOGO</Link>
+                <Link to="/" className="header__logo">LOGO</Link>
 
                 <div className="header__search">
                     <input type="text" name="" id="" className="header__search--input" placeholder="What are you searching?" />

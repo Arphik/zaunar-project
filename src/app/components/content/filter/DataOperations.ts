@@ -39,7 +39,7 @@ export class DataOperations{
     }
 
     filteringData(){
-        let filteredData = this.getFullData();
+        const filteredData = this.getFullData();
         return filteredData;
     }
 }
