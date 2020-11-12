@@ -34,12 +34,16 @@
     height: 40px;
     background: #fff;
   }
-  .changeView div{
+  .items-list__change-view--container{
+    width: 12%;
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .items-list__change-view--btn{
     width: 22px;
     height: 16px;
-    margin: 5px;
-    float: left;
-    cursor: pointer;
   }
   .largeBricks{ background: url('./largeBricks.png'); }
   .largeBricks:hover{ background: url('./largeBricksH.png'); }

@@ -4,7 +4,7 @@ import './Filter.scss';
 import { IGpusModel, IFilterObject } from '../views/gpus.model';
 
 interface FilterProps {
-  data: IGpusModel;
+  data: Promise<IGpusModel>;
   changeFilteredData(filter: IFilterObject): void;
 }
 interface FilterState {
@@ -23,14 +23,15 @@ export default class Filter extends Component<FilterProps, FilterState> {
                 memorytype: [],
                 vram: [],
             },
-            types: this.props.data.gpuStats.types.map((type, index) => (<div className="filter__type" key={index}>
-                <div className="filter__type--title">{type.title}</div>
-                {type.names.map((item, index) => (
-                    <div className="filter__checkbox--container" key={index}>
-                        <span className="filter__clear" onClick={() => this.clearCheckboxes(type.name)}>Wyczyść</span>
-                        <input className={`filter__checkbox--${type.name}`} type="checkbox" onChange={this.filterData} name={type.name} id={String(index)}/>{item.t}
-                    </div>))}
-            </div>))
+            types: []
+            // this.props.data.gpuStats.types.map((type, index) => (<div className="filter__type" key={index}>
+            //     <div className="filter__type--title">{type.title}</div>
+            //     {type.names.map((item, index) => (
+            //         <div className="filter__checkbox--container" key={index}>
+            //             <span className="filter__clear" onClick={() => this.clearCheckboxes(type.name)}>Wyczyść</span>
+            //             <input className={`filter__checkbox--${type.name}`} type="checkbox" onChange={this.filterData} name={type.name} id={String(index)}/>{item.t}
+            //         </div>))}
+            // </div>))
         }
     }
 
@@ -62,7 +63,7 @@ export default class Filter extends Component<FilterProps, FilterState> {
     render(){
         return (
             <div className="filter">
-                {this.state.types}
+                {/* {this.state.types} */}
             </div>
         );
     }

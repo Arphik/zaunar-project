@@ -1,26 +1,22 @@
 import React from 'react';
 import './PanelAddProd.scss';
 
-interface IPostData{
-    name: string,
-    description: string,
-    price: number,
-}
-
 interface IState{
     url: string,
     name: string,
     desc: string,
+    qty: number,
     price: number,
 }
 
 export default class PanelAddProd extends React.Component<any, IState>{
 
     state: IState = {
-            "url": 'http://localhost:3000/products',
-            name: 'e2334r23',
-            desc: 'r2dfsdfwqewqedf',
-            price: 44,
+            url: 'http://localhost:3000/products',
+            name: 'TestName',
+            desc: 'TestDescr',
+            qty: 0,
+            price: 0,
     }
 
     updateName = (e: React.FormEvent<HTMLInputElement>) => {
@@ -37,25 +33,27 @@ export default class PanelAddProd extends React.Component<any, IState>{
 
     addProduct = async (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        const data = JSON.stringify({
+        const data = {
             name: this.state.name,
             description: this.state.desc,
+            qty: this.state.qty,
             price: this.state.price,
-        });
+        };
 
         const fetchOpts = {
-            body: data,
+            body: JSON.stringify(data),
             method: 'POST', // or 'PUT'
-            mode: 'no-cors' as RequestMode,
-            headers: {
+            mode: 'cors' as RequestMode,
+            headers: new Headers({
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-            },
+                'Access-Control-Allow-Origin': '*'
+            }),
         };
         try {
-            console.log('Fetch data ', data, this.state.url);
+            console.log('Fetch data ', data);
             const response = await fetch(this.state.url, fetchOpts);
-            console.log('Fetch response ', response);
+            console.log('Fetch response ', response.body);
             return response;
         } catch (error) {
             console.log('Fetch error ', error);
