@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './LargeBricksView.scss';
 import { Link } from "react-router-dom";
 import { IItem } from './gpus.model';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { JsxEmit } from 'typescript';
 
 type ViewProps = {
-  data: IItem[]
+  data: IItem[],
+  action(id: string): void
 }
 
-const LargeBricksView = ({data}: ViewProps): JSX.Element => {
+const LargeBricksView = ({data, action}: ViewProps): JSX.Element => {
+
+  // console.log("LARGE view data ", data);
 
   const elements = data.map(({id, image, title, price, gpumodel, vram, memorytype, connectors}: IItem, index: number) => (
-    <Link to={`./${id}`} className="large-bricks__item" key={index}>
+    <Link to={`search/${id}`} className="large-bricks__item" key={index}>
     
       <div className="large-bricks__compare">
         <span className="large-bricks__compare--icon">
@@ -21,7 +23,7 @@ const LargeBricksView = ({data}: ViewProps): JSX.Element => {
         </span>
       </div>
       
-      <img className="large-bricks__image" src={image} alt=""/>
+      <img className="large-bricks__image" src={`./assets/${image}`} alt=""/>
     
       <div className="large-bricks__desc">
         <Link to={`./${id}`} className="large-bricks__title">{title}</Link>
@@ -35,12 +37,12 @@ const LargeBricksView = ({data}: ViewProps): JSX.Element => {
       
       <div className="large-bricks__price"><span>{price} zł</span></div>
       
+      <span className="large-bricks__delete" onClick={() => action(id)}>Del</span>
       <span className="large-bricks__cart"><FontAwesomeIcon icon={faCartPlus} /></span>
 
     </Link>
   ));
 
-  console.log('type elements ', elements);
   return (
     <div className="large-bricks">
       {elements}

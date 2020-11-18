@@ -13,10 +13,10 @@ type Props = {
 const MenuTopCategory = ({categories}: Props) => {
 
     const grayOutContent = (choice: boolean) => {
-        console.log("CHANGE");
+        // console.log("CHANGE");
         if(choice){
             document.querySelector('.gray-cover')?.setAttribute('style', 'background: rgba(0, 0, 0, 0.541); height: 100%;');
-            console.log(document.querySelector('.gray-cover'));
+            // console.log(document.querySelector('.gray-cover'));
         }else{
             document.querySelector('.gray-cover')?.setAttribute('style', 'background: rgba(0, 0, 0, 0); height: 0;');
         }

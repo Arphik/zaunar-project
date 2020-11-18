@@ -12,69 +12,70 @@ import { IItem } from './views/gpus.model';
 interface ItemsListState {
   data: IItem[];
   view: number;
+  dataOperations: DataOperations;
 }
 
 export default class ItemsList extends Component<{}, ItemsListState> {
 
-  constructor(props: any){
+  constructor(props: any) {
     super(props);
     this.state = {
       data: [],
       view: 1,
+      dataOperations: new DataOperations(),
     }
-    // console.log("didMount data ", this.state.data);
   }
 
-  componentDidMount(){
+  componentDidMount() {
 
-    const promisedData = new DataOperations().getFullData();
-    promisedData.then((data)=>{
+    const promisedData = this.state.dataOperations.getFullData();
+    promisedData.then((data) => {
 
-      this.setState(() => 
-        ({data: data})
+      this.setState(() =>
+        ({ data: data })
       );
 
     })
   }
 
-    changeView = (choice: number): JSX.Element => {
-      let newView = (<div></div>);
-        switch(choice){
-            case 1: newView = (<LargeBricksView data={this.state.data}/>);
-            break;
-            // case 2: newView = (<SmallBricksView data={this.state.filteredData}/>);
-            // break;
-            // case 3: newView = (<LargeListView data={this.state.filteredData}/>);
-            // break;
-            // case 4: newView = (<SmallListView data={this.state.filteredData}/>);
-            // break;
-        }
-        return newView;
+  changeView = (choice: number): JSX.Element => {
+    let newView = (<div></div>);
+    switch (choice) {
+      case 1: newView = (<LargeBricksView data={this.state.data} action={this.state.dataOperations.deleteItem} />);
+        break;
+      case 2: newView = (<SmallBricksView data={this.state.data} />);
+        break;
+      case 3: newView = (<LargeListView data={this.state.data} />);
+        break;
+      case 4: newView = (<SmallListView data={this.state.data} />);
+        break;
     }
+    return newView;
+  }
 
-    changeFilteredData = (filter: any): void => {
-      // let newFilteredData = JSON.parse(JSON.stringify(this.state.data));
-      // newFilteredData.items = this.state.dataOps.setFilteredData(this.state.data, filter);
-      // this.setState(() => ({filteredData: newFilteredData}));
-      //  console.log("FILTERED", this.state.filteredData);
-    }
+  changeFilteredData = (filter: any): void => {
+    // let newFilteredData = JSON.parse(JSON.stringify(this.state.data));
+    // newFilteredData.items = this.state.dataOps.setFilteredData(this.state.data, filter);
+    // this.setState(() => ({filteredData: newFilteredData}));
+    //  console.log("FILTERED", this.state.filteredData);
+  }
 
-    render(): JSX.Element {
-      return (
-        <div className="shop-content">
-          {/* <Filter data={this.state.data} changeFilteredData={this.changeFilteredData}/> */}
+  render(): JSX.Element {
+    return (
+      <div className="shop-content">
+        {/* <Filter data={this.state.data} changeFilteredData={this.changeFilteredData}/> */}
 
-          
-          <div className="items-list">
-            <div className="items-list__change-view--container">
-              <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(()=>({view: 1}))}></div>
-              <div className="items-list__change-view--btn smallBricks" onClick={() => this.setState(()=>({view: 2}))}></div>
-              <div className="items-list__change-view--btn largeList" onClick={() => this.setState(()=>({view: 3}))}></div>
-              <div className="items-list__change-view--btn smallList" onClick={() => this.setState(()=>({view: 4}))}></div>
-            </div>
-            {this.changeView(this.state.view)}
+
+        <div className="items-list">
+          <div className="items-list__change-view--container">
+            <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(() => ({ view: 1 }))}></div>
+            <div className="items-list__change-view--btn smallBricks" onClick={() => this.setState(() => ({ view: 2 }))}></div>
+            <div className="items-list__change-view--btn largeList" onClick={() => this.setState(() => ({ view: 3 }))}></div>
+            <div className="items-list__change-view--btn smallList" onClick={() => this.setState(() => ({ view: 4 }))}></div>
           </div>
+          {this.changeView(this.state.view)}
         </div>
-      )
-    };
+      </div>
+    )
+  };
 }

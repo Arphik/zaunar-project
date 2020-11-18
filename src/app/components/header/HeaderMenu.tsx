@@ -18,7 +18,7 @@ const HeaderMenu: React.FC = () => {
                 </div>
             </Link>
             <span className="header__separator"></span>
-            <Link to="panel" className="header__link">
+            <Link to="/panel" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faUser} />
                     <span className="header__link--text">Twoje konto</span>

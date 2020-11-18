@@ -12,6 +12,7 @@ export const Panel = () => {
 
             <Switch>
                 <Route path="/panel/add" component={PanelAddProd}/>
+                <Route path="/panel/edit" component={PanelAddProd}/>
             </Switch>
         </section>
     )

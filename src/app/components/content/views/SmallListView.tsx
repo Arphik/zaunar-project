@@ -7,22 +7,22 @@ import { faImage } from '@fortawesome/free-regular-svg-icons';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 type ViewProps = {
-  data: IGpusModel
+  data: IItem[]
 }
 
 const SmallListView = ({data}: ViewProps): JSX.Element => {
-  console.log("SMALL LIST DATA", data);
+  // console.log("SMALL LIST DATA", data);
 
-  const items = data.items.map((item: IItem, index) => (
-    <Link to={`${index}`} className="small-list__item" key={index}>
+  const items = data.map(({id, image, title, shortStats, price, gpumodel, vram, memorytype, connectors}: IItem, index) => (
+    <Link to={`search/${id}`} className="small-list__item" key={index}>
       <div className="small-list__image--container">
         <FontAwesomeIcon icon={faImage} />
-        <img src={item.image} className="small-list__hover-image" alt=""/>
+        <img src={image} className="small-list__hover-image" alt=""/>
       </div>
   
-      <h5 className="small-list__title">{item.title}</h5>
+      <h5 className="small-list__title">{title}</h5>
 
-      <span className="small-list__short-stats">{item.shortStats}</span>
+      <span className="small-list__short-stats">{shortStats}</span>
   
       <div className="small-list__compare">
         <span className="small-list__compare--icon">
@@ -36,7 +36,7 @@ const SmallListView = ({data}: ViewProps): JSX.Element => {
         </span>
       </div>
   
-      <div className="small-list__price">6 738,08 zł</div>
+  <div className="small-list__price">{price} zł</div>
     </Link>
   ));
   

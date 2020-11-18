@@ -26,6 +26,13 @@ a{
   &:hover > .large-bricks__cart{
     opacity: 1;
   }
+  &:hover > .large-bricks__delete{
+    opacity: 1;
+  }
+  &:nth-child(2n){
+    border-left: 1px solid #d7dbe7;
+    border-right: 1px solid #d7dbe7;
+  }
 }
 .large-bricks__compare{
   width: 40px;
@@ -92,6 +99,25 @@ a{
     transition: background-color .2s, opacity .3s;
     &:hover{
       background: rgb(0, 189, 57);
+    }
+    opacity: 0;
+  }
+
+  .large-bricks__delete{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 66px;
+    bottom: 16px;
+    border: 1px solid rgb(255, 129, 129);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: background-color .2s, opacity .3s;
+    &:hover{
+      background: rgb(255, 129, 129);
     }
     opacity: 0;
   }
