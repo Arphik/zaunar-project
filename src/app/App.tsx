@@ -13,6 +13,7 @@ import {
 import ItemsList from './components/content/ItemsList';
 import ItemView from './components/content/ItemView';
 import Panel from './components/panel/Panel';
+import Cart from './components/content/Cart';
 
 interface IParams{
   params: {
@@ -22,8 +23,6 @@ interface IParams{
 
 const App: React.FC = () => {
 
-  let params = useParams();
-  console.log('Params ', params);
   return (
       <div className="App">
             <Header/> 
@@ -35,6 +34,7 @@ const App: React.FC = () => {
                 <Route path="/search" exact component={ItemsList}/>
                 <Route path="/search/:id" component={ItemView} />
                 <Route path="/panel" component={Panel}/>
+                <Route path="/cart" component={Cart}/>
               </Switch>
                 {/* <Route path="/">
                   <Promotions/>

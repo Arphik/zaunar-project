@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { IItem } from './views/gpus.model';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { DataOperations } from './filter/DataOperations';
+import DataOperations from './filter/DataOperations';
 
 interface IProps{
     _id: string,
     match: {
       isExact: boolean,
       params: {
-        _id: string
+        id: string
       },
 
     },
@@ -31,9 +31,12 @@ export default class ItemView extends Component<IProps, IState> {
       // console.log("didMount data ", this.state.data);
     }
     componentDidMount(){
+
+      console.log("match", this.props.match);
+
       const dataOps = new DataOperations();
 
-      const promisedItem = dataOps.getItem(this.props.match.params._id);
+      const promisedItem = dataOps.getItem(this.props.match.params.id);
       promisedItem.then((item)=>{
   
         this.setState(() => 

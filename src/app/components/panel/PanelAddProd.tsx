@@ -1,7 +1,13 @@
 import React from 'react';
+import DataOperations from '../content/filter/DataOperations';
 import './PanelAddProd.scss';
 
+interface IProps{
+
+}
+
 interface IState{
+    id: string,
     title: string,
     description: string,
     qty: number,
@@ -15,20 +21,25 @@ interface IState{
     connectors: string,
 }
 
-export default class PanelAddProd extends React.Component<any, IState>{
+export default class PanelAddProd extends React.Component<IProps, IState>{
 
-    state: IState = {
-            title: 'Lolforce RTX9950 Pamięć: 500 TB',
-            description: 'TestDescr',
-            qty: 1,
-            price: 10000000,
-            shortStats: 'Układ: Lolforce RTX9950 Pamięć: 500 TB Rodzaj pamięci: GDDR10XD Złącza: VGA 1szt., HighplayPort 9.90 5 szt.',
-            vram: '500 TB',
-            image: 'rtx2080tiasus.jpg',
-            gpumodel: 'RTX9950',
-            producer: 'Asus',
-            memorytype: 'GDDR10XD',
-            connectors: 'VGA 1szt., HighplayPort 9.90 5 szt.',
+    constructor(props: IProps){
+        super(props);
+
+        this.state = {
+                id: 'id',
+                title: 'Lolforce RTX9950 Pamięć: 500 TB',
+                description: 'TestDescr',
+                qty: 1,
+                price: 10000000,
+                shortStats: 'Układ: Lolforce RTX9950 Pamięć: 500 TB Rodzaj pamięci: GDDR10XD Złącza: VGA 1szt., HighplayPort 9.90 5 szt.',
+                vram: '500 TB',
+                image: 'rtx2080tiasus.jpg',
+                gpumodel: 'RTX9950',
+                producer: 'Asus',
+                memorytype: 'GDDR10XD',
+                connectors: 'VGA 1szt., HighplayPort 9.90 5 szt.',
+        }
     }
 
     updateName = (e: React.FormEvent<HTMLInputElement>) => {
@@ -70,29 +81,9 @@ export default class PanelAddProd extends React.Component<any, IState>{
 
     addProduct = async (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-
-        const url = 'http://localhost:3000/products';
-
-        const mod: RequestMode = 'cors';
-
-        const fetchOpts = {
-            body: JSON.stringify(this.state),
-            method: 'POST',
-            mode: mod,
-            headers: new Headers({
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            }),
-        };
-        try {
-            console.log('Fetch data ', this.state);
-            const response = await fetch(url, fetchOpts);
-            console.log('Fetch response ', response.body);
-            return response;
-        } catch (error) {
-            console.log('Fetch error ', error);
-        }
+        console.log("Add product.");
+        const dataOps = new DataOperations();
+        // dataOps.addProduct(this.state);
     }
 
     render() {

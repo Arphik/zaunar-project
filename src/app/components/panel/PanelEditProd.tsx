@@ -1,4 +1,5 @@
 import React from 'react';
+import DataOperations from '../content/filter/DataOperations';
 import { IItem } from '../content/views/gpus.model';
 import './PanelEditProd.scss';
 
@@ -21,6 +22,7 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
     }
 
     updateInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        console.log('Update from input.');
         let newItem: {[key:string]: string | number} = { ...this.state.currItem };
         const key: string = e.currentTarget.name;
         const value: number | string = e.currentTarget.value;
@@ -64,29 +66,11 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
     //     this.setState({ [key]: value });
     // }
 
-    addProduct = async (e: React.FormEvent<HTMLInputElement>) => {
+    changeProduct = async (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
 
-        const url = 'http://localhost:3000/products';
-
-        const fetchOpts = {
-            body: JSON.stringify(this.state),
-            method: 'UPDATE',
-            mode: 'cors' as RequestMode,
-            headers: new Headers({
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            }),
-        };
-        try {
-            console.log('Fetch data ', this.state);
-            const response = await fetch(url, fetchOpts);
-            console.log('Fetch response ', response.body);
-            return response;
-        } catch (error) {
-            console.log('Fetch error ', error);
-        }
+        // const dataOps = new DataOperations();
+        // dataOps.editProduct(this.state.currItem);
     }
 
     render() {
@@ -98,7 +82,7 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
             <form className="panel__add-prod--form">
 
                 <input onChange={this.updateInput} name="name" value={this.state.currItem.title} type="text" className="panel__add-prod--name panel__add-prod--input" placeholder="Name"/>
-                <textarea onChange={this.updateInput} name="desc" className="panel__add-prod--desc panel__add-prod--input" rows={4} placeholder="Description"></textarea>
+                <textarea onChange={this.updateInput} name="description" className="panel__add-prod--desc panel__add-prod--input" rows={4} placeholder="Description"></textarea>
                 <input onChange={this.updateInput} name="shortStats" type="text" className="panel__add-prod--short-stats panel__add-prod--input" placeholder="Short stats"/>
                 {/* <input onChange={this.updateVram} name="vram" type="text" className="panel__add-prod--vram panel__add-prod--input" placeholder="Vram"/> */}
                 {/* <input onChange={this.updateImage} name="image" type="text" className="panel__add-prod--image panel__add-prod--input" placeholder="Image"/> */}
@@ -108,7 +92,7 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
                 {/* <input onChange={this.updateConnectors} name="connectors" type="text" className="panel__add-prod--connectors panel__add-prod--input" placeholder="Connectors"/> */}
                 {/* <input onChange={this.updatePrice} name="shortStats" type="text" className="panel__add-prod--price panel__add-prod--input" placeholder="Price"/> */}
 
-                <input onClick={this.addProduct} type="button" className="panel__add-prod--submit panel__add-prod--input" value="Add"/>
+                <input onClick={this.changeProduct} type="button" className="panel__add-prod--submit panel__add-prod--input" value="Add"/>
 
             </form>
         </div>

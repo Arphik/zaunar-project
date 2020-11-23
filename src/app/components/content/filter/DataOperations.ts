@@ -1,18 +1,22 @@
 import data from '../../../../assets/shop-items.json';
 import ItemView from '../ItemView';
-import { IGpusModel, IItem, IFilterObject } from '../views/gpus.model';
+import { IItem, IFilterObject } from '../views/gpus.model';
 
-export interface DataOperations {
-  fullData: IGpusModel;
+interface IDataOperations {
   getFullData(): Promise<IItem[]>;
-  getFilteredData(): IGpusModel;
-  FetchData(url: string): IGpusModel;
-  mod: RequestMode;
-  fetchOpts: Object;
+  getItem(id: string): Promise<IItem>;
+  addProduct(data: IItem): void;
+  editProduct(data: IItem): void;
+  deleteItem(id: string): void;
+  getFilteredData(items: IItem[], filterObject?: IFilterObject, ids?: string[]): IItem[];
 }
 
-export class DataOperations {
+export default class DataOperations implements IDataOperations {
+  mod: RequestMode;
+  fetchOpts: RequestInit;
+
   constructor() {
+    
     this.mod = 'cors';
     this.fetchOpts = {
       method: 'GET',
@@ -22,6 +26,7 @@ export class DataOperations {
         'Content-Type': 'application/json',
       },
     };
+
   }
 
   async getFullData(): Promise<IItem[]> {
@@ -53,10 +58,63 @@ export class DataOperations {
     }
   }
 
+  async addProduct(data: IItem){
+
+    const url = 'http://localhost:3000/products';
+
+    const mode: RequestMode = 'cors';
+
+    const fetchOpts = {
+        body: JSON.stringify(data),
+        method: 'POST',
+        mode: mode,
+        headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }),
+    };
+    try {
+      console.log('Fetch add product ', data);
+        const response = await fetch(url, fetchOpts);
+        console.log('Fetch response ', response.body);
+        return response;
+    } catch (error) {
+        console.log('Fetch error ', error);
+    }
+  }
+
+  async editProduct(data: IItem){
+
+    const url = 'http://localhost:3000/products';
+
+    const mode: RequestMode = 'cors';
+    const fetchOpts = {
+        body: JSON.stringify(data),
+        method: 'UPDATE',
+        mode: mode,
+        headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }),
+    };
+    try {
+        console.log('Fetch edit product ', data);
+        const response = await fetch(url, fetchOpts);
+        console.log('Fetch response ', response.body);
+        return response;
+    } catch (error) {
+        console.log('Fetch error ', error);
+    }
+  }
+
   deleteItem(id: string): void {
+    console.log('DataOperations delete ', id);
+    const mode: RequestMode = 'cors';
     const fetchOpts = {
       method: 'DELETE',
-      // mode: 'cors' as RequestMode,
+      mode: mode,
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -70,29 +128,33 @@ export class DataOperations {
     }
   }
 
-  // setFilteredData(items: Promise<IGpusModel>, filterObject: IFilterObject): IItem[] {
-  //     console.log("setFilteredData items", items);
-  //     let newItems: IItem[] = items;
-  //     if(filterObject.gpumodel.length){
-  //         newItems = items
-  //         .filter((item) => filterObject.gpumodel
-  //             .find((gpumodel) => gpumodel === item.gpumodel) !== undefined);
-  //     }
-  //     if(filterObject.producer.length){
-  //         newItems = items
-  //         .filter((item) => filterObject.producer
-  //             .find((producer) => producer === item.producer) !== undefined);
-  //     }
-  //     if(filterObject.memorytype.length){
-  //         newItems = items
-  //         .filter((item) => filterObject.memorytype
-  //             .find((memorytype) => memorytype === item.memorytype) !== undefined);
-  //     }
-  //     if(filterObject.vram.length){
-  //         newItems = items
-  //         .filter((item) => filterObject.vram
-  //             .find((vram) => vram === item.vram) !== undefined);
-  //     }
-  //     return newItems;
-  // }
+  getFilteredData(items: IItem[], filterObject?: IFilterObject, ids?: string[]): IItem[] {
+      console.log("setFilteredData items", items);
+      let newItems: IItem[] = items;
+
+      
+
+      // if(filterObject.gpumodel.length){
+      //     newItems = items
+      //     .filter((item) => filterObject.gpumodel
+      //         .find((gpumodel) => gpumodel === item.gpumodel) !== undefined);
+      // }
+      // if(filterObject.producer.length){
+      //     newItems = items
+      //     .filter((item) => filterObject.producer
+      //         .find((producer) => producer === item.producer) !== undefined);
+      // }
+      // if(filterObject.memorytype.length){
+      //     newItems = items
+      //     .filter((item) => filterObject.memorytype
+      //         .find((memorytype) => memorytype === item.memorytype) !== undefined);
+      // }
+      // if(filterObject.vram.length){
+      //     newItems = items
+      //     .filter((item) => filterObject.vram
+      //         .find((vram) => vram === item.vram) !== undefined);
+      // }
+      return newItems;
+  }
 }
+

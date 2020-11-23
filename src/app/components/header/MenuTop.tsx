@@ -1,29 +1,29 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Link
+    BrowserRouter as Router,
+    Link
 } from "react-router-dom";
 import './MenuTop.scss';
 
 import Menu from './MenuTop.json';
 import MenuTopCategory from './MenuTopCategory';
 
-export interface SubCatLink{
+export interface SubCatLink {
     name: string,
     url: string
 }
 
-export interface SubCat{
+export interface SubCat {
     name: string,
     subcatlinks: SubCatLink[]
 }
 
-export interface Category{
+export interface Category {
     name: string,
     subcats: SubCat[]
 }
 
-export interface IMenuTop{
+export interface IMenuTop {
     Menu: Category
 }
 
@@ -33,7 +33,7 @@ const MenuTop = () => {
 
     return (
         <nav className="menu-top">
-            <MenuTopCategory categories={Menu.categories}/>
+            <MenuTopCategory categories={Menu.categories} />
         </nav>
     );
 }

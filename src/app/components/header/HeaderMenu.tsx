@@ -30,7 +30,7 @@ const HeaderMenu: React.FC = () => {
                     <span className="header__link--text">Twoje listy</span>
                 </div>
             </Link>
-            <Link to="" className="header__link">
+            <Link to="/cart" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faShoppingCart} />
                     <span className="header__link--text">Koszyk</span>

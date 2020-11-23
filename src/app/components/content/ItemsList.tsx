@@ -6,7 +6,7 @@ import LargeBricksView from './views/LargeBricksView';
 import SmallBricksView from './views/SmallBricksView';
 import LargeListView from './views/LargeListView';
 import SmallListView from './views/SmallListView';
-import { DataOperations } from './filter/DataOperations';
+import DataOperations from './filter/DataOperations';
 import { IItem } from './views/gpus.model';
 
 interface ItemsListState {
@@ -24,9 +24,13 @@ export default class ItemsList extends Component<{}, ItemsListState> {
       view: 1,
       dataOperations: new DataOperations(),
     }
+
+    this.addToCart = this.addToCart.bind(this);
   }
 
   componentDidMount() {
+
+    this.setState(() => ({ dataOperations: new DataOperations()}))
 
     const promisedData = this.state.dataOperations.getFullData();
     promisedData.then((data) => {
@@ -38,10 +42,17 @@ export default class ItemsList extends Component<{}, ItemsListState> {
     })
   }
 
+  addToCart(id: string, i: number = 0): void {
+    const newIdsString = localStorage.getItem('cartItems')+` ${id}`;
+    localStorage.setItem('cartItems', newIdsString);
+
+    console.log('localStorage', localStorage.getItem('cartItems'));
+  }
+
   changeView = (choice: number): JSX.Element => {
     let newView = (<div></div>);
     switch (choice) {
-      case 1: newView = (<LargeBricksView data={this.state.data} action={this.state.dataOperations.deleteItem} />);
+      case 1: newView = (<LargeBricksView data={this.state.data} toCart={this.addToCart} />);
         break;
       case 2: newView = (<SmallBricksView data={this.state.data} />);
         break;
@@ -61,6 +72,7 @@ export default class ItemsList extends Component<{}, ItemsListState> {
   }
 
   render(): JSX.Element {
+    console.log('ItemsList data ', this.state.data);
     return (
       <div className="shop-content">
         {/* <Filter data={this.state.data} changeFilteredData={this.changeFilteredData}/> */}

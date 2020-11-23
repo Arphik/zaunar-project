@@ -25,11 +25,11 @@ const Header: React.FC = () => {
                     <button className="header__search--button"><FontAwesomeIcon icon={faSearch} /></button>
                 </div>
 
-                <HeaderMenu/>
-                
+                <HeaderMenu />
+
             </div>
 
-            <MenuTop/>
+            <MenuTop />
         </header>
     );
 }
