@@ -76,10 +76,12 @@ export default class Cart extends Component<IProps, IState> {
     }
 
     render() {
+        console.log("State item ", this.state.cartItems);
         return (
             <div className="cart" >
                 {this.state.cartItems}
-                <span className="cart__remove-all" onClick={() => this.cleanCart()}>Remove all</span>
+                {this.state.cartItems.length ? (<span className="cart__remove-all" onClick={() => this.cleanCart()}>Remove all</span>) :
+                (<span className="cart__empty">Your cart is empty</span>)}
             </div>
         );
     }
