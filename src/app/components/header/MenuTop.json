@@ -9,7 +9,7 @@
                                 "subcatlinks": [
                                     {
                                         "name": "Wejdź do kategorii",
-                                        "url": "./search"
+                                        "url": "search"
                                     },
                                     {
                                         "name": "Kat1Link2",
