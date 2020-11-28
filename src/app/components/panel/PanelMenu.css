@@ -1,0 +1,43 @@
+.panel__menu {
+  width: 90%;
+  min-height: 60px;
+  padding: 10px;
+  margin: 40px auto;
+  background: #3473e7;
+  color: white;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.panel__link {
+  width: 18%;
+  margin: 0 1%;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel__link:hover {
+  color: #3473e7;
+  background: white;
+}
+
+.active {
+  color: #3473e7;
+  background: white;
+}
+/*# sourceMappingURL=PanelMenu.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,iBAAiB;EAC1B,UAAU,EAAE,OAAkB;CACjC",
+    "sources": [
+        "MenuTop.scss"
+    ],
+    "names": [],
+    "file": "MenuTop.css"
+}

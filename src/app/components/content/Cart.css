@@ -1,0 +1,97 @@
+.cart {
+  width: 70%;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cart__item {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart__title {
+  width: 40%;
+}
+
+.cart__description {
+  width: 40%;
+}
+
+.cart__price {
+  width: 10%;
+}
+
+.cart__edit {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #23deff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  -webkit-transition: background-color .2s, opacity .3s;
+  transition: background-color .2s, opacity .3s;
+  cursor: pointer;
+}
+
+.cart__edit:hover {
+  background: #1783ff;
+}
+
+.cart__remove, .cart__remove-all {
+  width: 10%;
+  height: 35px;
+  border: 1px solid #ff8181;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  -webkit-transition: background-color .2s, opacity .3s;
+  transition: background-color .2s, opacity .3s;
+  cursor: pointer;
+}
+
+.cart__remove:hover, .cart__remove-all:hover {
+  background: #ff8181;
+}
+
+.cart__empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=Cart.css.map */

@@ -1,0 +1,75 @@
+.panel__prods-list--item {
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel__prods-list--title {
+  width: 40%;
+}
+
+.panel__prods-list--description {
+  width: 40%;
+}
+
+.panel__prods-list--price {
+  width: 10%;
+}
+
+.panel__prods-list--edit {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #23deff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  -webkit-transition: background-color .2s, opacity .3s;
+  transition: background-color .2s, opacity .3s;
+  cursor: pointer;
+}
+
+.panel__prods-list--edit:hover {
+  background: #1783ff;
+}
+
+.panel__prods-list--delete {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ff8181;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  -webkit-transition: background-color .2s, opacity .3s;
+  transition: background-color .2s, opacity .3s;
+  cursor: pointer;
+}
+
+.panel__prods-list--delete:hover {
+  background: #ff8181;
+}
+/*# sourceMappingURL=PanelProdsList.css.map */

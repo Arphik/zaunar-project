@@ -1,0 +1,29 @@
+.filter {
+  width: 30%;
+}
+
+.filter__type {
+  position: relative;
+}
+
+.filter__clear {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.filter__clear:hover {
+  color: gray;
+}
+
+.filter__type--title {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.filter__checkbox--container {
+  margin: 10px 0;
+  text-align: left;
+}
+/*# sourceMappingURL=Filter.css.map */

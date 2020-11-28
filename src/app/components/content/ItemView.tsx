@@ -13,7 +13,6 @@ interface IProps{
       params: {
         id: string
       },
-
     },
 }
 

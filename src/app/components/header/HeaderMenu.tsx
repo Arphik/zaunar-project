@@ -18,18 +18,18 @@ const HeaderMenu: React.FC = () => {
                 </div>
             </Link>
             <span className="header__separator"></span>
-            <Link to="/panel" className="header__link">
+            {/* <Link to="/panel" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faUser} />
                     <span className="header__link--text">Twoje konto</span>
                 </div>
-            </Link>
-            <Link to="" className="header__link">
+            </Link> */}
+            {/* <Link to="" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faHeart} />
                     <span className="header__link--text">Twoje listy</span>
                 </div>
-            </Link>
+            </Link> */}
             <Link to="/cart" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faShoppingCart} />

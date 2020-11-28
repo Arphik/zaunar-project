@@ -1,0 +1,118 @@
+.item {
+  border: 1px solid #d7dbe7;
+}
+
+.small-list__item {
+  width: 100%;
+  height: 40px;
+  padding: 5px 2px;
+  margin-top: 1px;
+  border-bottom: 1px solid #d6dae3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.small-list__item:hover {
+  -webkit-box-shadow: 0px 3px 5px 1px #dfdfdf;
+          box-shadow: 0px 3px 5px 1px #dfdfdf;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.small-list__image--container {
+  /*//////////////////*/
+  width: 3%;
+  height: 100%;
+}
+
+.small-list__image--container:hover img {
+  margin-left: 20px;
+  display: block;
+  position: absolute;
+}
+
+.small-list__hover-image {
+  width: 250px;
+  height: 200px;
+  display: none;
+  border: 1px solid #cccccc;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.small-list__title {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.small-list__title:hover {
+  text-decoration: underline;
+}
+
+.small-list__short-stats {
+  width: 40%;
+  padding-right: 10px;
+  font-size: 11px;
+  text-decoration: none;
+  color: #818181;
+  font-family: "Open Sans",sans-serif;
+  font-weight: normal;
+}
+
+.small-list__compare, .small-list__cart {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.small-list__compare:hover, .small-list__cart:hover {
+  background: #ebebeb;
+}
+
+.small-list__price {
+  /*//////////////////*/
+  width: auto;
+  height: 100%;
+  padding: 5px;
+  font-size: 11px;
+  text-align: right;
+  overflow: hidden;
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 0.7rem;
+  }
+  .shortStats {
+    display: none;
+  }
+}
+/*# sourceMappingURL=SmallListView.css.map */

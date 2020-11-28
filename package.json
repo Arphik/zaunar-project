@@ -1,7 +1,7 @@
 {
   "name": "shop",
   "version": "0.1.0",
-  "homepage": "https://arphik.github.io/react-shop/build/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
