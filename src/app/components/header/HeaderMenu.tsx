@@ -11,10 +11,10 @@ import { faHeadset, faShoppingCart, faUser, faHeart } from '@fortawesome/free-so
 const HeaderMenu: React.FC = () => {
     return (
         <nav className="header__menu">
-            <Link to="" className="header__link">
+            <Link to="/panel" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon className="header__link--icon" icon={faHeadset} />
-                    <span className="header__link--text">Pomoc i kontakt</span>
+                    <span className="header__link--text">Support and contact</span>
                 </div>
             </Link>
             <span className="header__separator"></span>
@@ -33,7 +33,7 @@ const HeaderMenu: React.FC = () => {
             <Link to="/cart" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faShoppingCart} />
-                    <span className="header__link--text">Koszyk</span>
+                    <span className="header__link--text">Cart</span>
                 </div>
             </Link>
         </nav>

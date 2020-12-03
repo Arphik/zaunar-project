@@ -7,7 +7,7 @@ import SmallBricksView from './views/SmallBricksView';
 import LargeListView from './views/LargeListView';
 import SmallListView from './views/SmallListView';
 import DataOperations from './filter/DataOperations';
-import { IItem } from './views/gpus.model';
+import { IItem } from './views/sup.model';
 
 interface ItemsListState {
   data: IItem[];
@@ -30,7 +30,7 @@ export default class ItemsList extends Component<{}, ItemsListState> {
 
   componentDidMount() {
 
-    this.setState(() => ({ dataOperations: new DataOperations()}))
+    this.setState(() => ({ dataOperations: new DataOperations()}));
 
     const promisedData = this.state.dataOperations.getFullData();
     promisedData.then((data) => {

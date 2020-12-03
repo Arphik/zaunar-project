@@ -17,18 +17,24 @@ interface IGpuStats{
 }
 
 export interface IItem{
-    id: string;
-    title: string;
-    description: string;
-    qty: number;
-    price: number;
-    shortStats: string;
-    vram: string;
-    image: string;
-    gpumodel: string;
-    producer: string;
-    memorytype: string;
-    connectors: string;
+    id: string,
+    title: string,
+    description: string,
+    qty: number,
+    sentTime: string,
+    price: number,
+    guarantee: string,
+    image: string,
+    producer: string,
+    type: string,
+    technology: string,
+    purpose: string,
+    oar: string,
+    handle: string,
+    thickness: string,
+    length: string,
+    width: string,
+    [index: string]: string | number
 }
 
 export interface IGpusModel{

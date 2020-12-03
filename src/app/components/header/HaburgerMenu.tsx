@@ -18,16 +18,16 @@ const HaburgerMenu = () => {
             <div className="navbar__content">
 
                 <div className="navbar__link" >
-                    <Link to="/products" className="navbar__link--a">Produkty</Link>
+                    <Link to="/products" className="navbar__link--a">Products</Link>
                 </div>
                 <div className="navbar__link" >
                 <Link to="/blog" className="navbar__link--a">Blog</Link>
                 </div>
                 <div className="navbar__link" >
-                <Link to="/about" className="navbar__link--a">O sklepie</Link>
+                <Link to="/about" className="navbar__link--a">About</Link>
                 </div>
                 <div className="navbar__link" >
-                <Link to="/contact" className="navbar__link--a">Kontakt</Link>
+                <Link to="/contact" className="navbar__link--a">Contact</Link>
                 </div>
             </div>
         </nav>

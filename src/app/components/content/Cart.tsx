@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Cart.scss';
 import DataOperations from './filter/DataOperations';
-import { IItem } from './views/gpus.model';
+import { IItem } from './views/sup.model';
 
 interface IProps {
 

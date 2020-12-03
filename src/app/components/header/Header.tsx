@@ -14,7 +14,10 @@ const Header: React.FC = () => {
         <header className="header">
 
             <div className="header__container1">
-                <Link to="/" className="header__logo">LOGO</Link>
+                <Link to="/" className="header__logo">
+                    <img src="./assets/logo.png" alt="" className="header__logo--img"/>
+                    Akademia Zaunara
+                </Link>
 
                 <div className="header__search">
                     <input type="text" name="" id="" className="header__search--input" placeholder="What are you searching?" />
@@ -29,16 +32,16 @@ const Header: React.FC = () => {
             <div className="header__container2">
 
                 <div className="header__top-menu">
-                    <span className="header__top-menu--link">
-                        <Link to="/sup" className="header__top-menu--a">
-                            DESKI SUP
-                        </Link>
-                    </span>
-                    <span className="header__top-menu--link">
-                        <Link to="/wood" className="header__top-menu--a">
-                            WYROBY DREWNIANE
-                        </Link>
-                    </span>
+                    <Link to="/sup" className="header__top-menu--link">
+                        <span className="header__top-menu--a">
+                            SUP SHOP
+                        </span>
+                    </Link>
+                    <Link to="/wood" className="header__top-menu--link">
+                        <span className="header__top-menu--a">
+                            WOODEN HANDMADES
+                        </span>
+                    </Link>
                     <HaburgerMenu />
                 </div>
 

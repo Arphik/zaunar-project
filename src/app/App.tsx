@@ -30,8 +30,8 @@ const App: React.FC = () => {
             <main className="app__content">
               <div className="gray-cover"></div>
               <Switch>
-                <Route path="/search" exact component={ItemsList}/>
-                <Route path="/search/:id" component={ItemView} />
+                <Route path="/sup" exact component={ItemsList}/>
+                <Route path="/sup/:id" component={ItemView} />
                 <Route path="/panel" component={Panel}/>
                 <Route path="/cart" component={Cart}/>
               </Switch>

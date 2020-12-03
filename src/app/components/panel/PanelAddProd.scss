@@ -8,35 +8,30 @@
     border: 1px solid rgb(223, 223, 223);
     box-shadow: 0 3px .6em rgb(233, 233, 233);
 }
+.panel__add-input{
 
-.panel__add-prod--title{
-    width: 100%;
-    height: 40px;
 }
 
-.panel__add-prod--form{
-    width: 100%;
+.panel__add--title{
 }
 
-.panel__add-prod--name{
-    width: 100%;
-    height: 40px;
+.panel__add--form{
 }
 
-.panel__add-prod--desc{
+.panel__add--name{
+}
+
+.panel__add--description{
     width: 100%;
 }
 
-.panel__add-prod--price{
-    width: 15%;
+.panel__add--price{
 }
 
-.panel__add-prod--submit{
-    width: 15%;
-    margin-left: 70%;
+.panel__add--submit{
 }
 
-.panel__add-prod--input{
+.panel__add-input{
     padding: 1%;
     margin-bottom: 2%;
     border: 1px solid rgb(223, 223, 223);
@@ -45,4 +40,8 @@
     &:focus{
         border: 1px solid rgb(167, 167, 167);
     }
+}
+
+.required{
+    border: 1px solid red;
 }

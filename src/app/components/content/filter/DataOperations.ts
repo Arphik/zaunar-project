@@ -1,6 +1,6 @@
 import data from '../../../../assets/shop-items.json';
 import ItemView from '../ItemView';
-import { IItem, IFilterObject } from '../views/gpus.model';
+import { IItem, IFilterObject } from '../views/sup.model';
 
 interface IDataOperations {
   getFullData(): Promise<IItem[]>;
@@ -109,7 +109,7 @@ export default class DataOperations implements IDataOperations {
     }
   }
 
-  deleteItem(id: string): void {
+  deleteItem(id: string): Promise<Response> {
     console.log('DataOperations delete ', id);
     const mode: RequestMode = 'cors';
     const fetchOpts = {
@@ -122,7 +122,7 @@ export default class DataOperations implements IDataOperations {
     };
 
     try {
-      fetch(`http://localhost:3000/products/${id}`, fetchOpts);
+      return fetch(`http://localhost:3000/products/${id}`, fetchOpts);
     } catch (error) {
       throw error;
     }
