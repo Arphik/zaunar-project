@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { IItem } from './sup.model';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import DataOperations from '../../filter/DataOperations';
 
 type ViewProps = {
   data: IItem[],
-  toCart(id: string): void,
 }
 
-const LargeBricksView = ({ data, toCart }: ViewProps): JSX.Element => {
+const LargeBricksView = ({ data }: ViewProps): JSX.Element => {
 
   const elements = data.map(({ id, image, title, price, type, technology, oar, handle, thickness, length, width }: IItem, index: number) => (
     <div className="large-bricks__item" key={index}>
@@ -40,7 +40,7 @@ const LargeBricksView = ({ data, toCart }: ViewProps): JSX.Element => {
 
       <div className="large-bricks__price"><span>Cena {price} zł</span></div>
 
-      <span className="large-bricks__cart" onClick={() => toCart(id)}><FontAwesomeIcon icon={faCartPlus} /></span>
+      <span className="large-bricks__cart" onClick={() => new DataOperations().addToCart(id)}><FontAwesomeIcon icon={faCartPlus} /></span>
 
     </div>
   ));

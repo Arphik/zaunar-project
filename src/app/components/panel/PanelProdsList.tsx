@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DataOperations from '../content/filter/DataOperations';
-import { IItem } from '../content/views/sup.model';
+import { IItem } from '../content/sup-shop/views/sup.model';
 import './PanelProdsList.scss';
 
 interface IProps { }

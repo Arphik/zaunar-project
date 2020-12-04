@@ -10,10 +10,10 @@ import {
   Route,
   useParams
 } from "react-router-dom";
-import ItemsList from './components/content/ItemsList';
-import ItemView from './components/content/ItemView';
+import ItemsList from './components/content/sup-shop/ItemsList';
 import Panel from './components/panel/Panel';
-import Cart from './components/content/Cart';
+import Cart from './components/content/sup-shop/cart/Cart';
+import ItemView from './components/content/sup-shop/ItemView';
 
 interface IParams{
   params: {

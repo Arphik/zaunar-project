@@ -1,6 +1,4 @@
-import data from '../../../../assets/shop-items.json';
-import ItemView from '../ItemView';
-import { IItem, IFilterObject } from '../views/sup.model';
+import { IItem, IFilterObject } from '../sup-shop/views/sup.model';
 
 interface IDataOperations {
   getFullData(): Promise<IItem[]>;
@@ -155,6 +153,20 @@ export default class DataOperations implements IDataOperations {
       //         .find((vram) => vram === item.vram) !== undefined);
       // }
       return newItems;
+  }
+  
+
+  addToCart(id: string, i: number = 0): boolean {
+    if(localStorage.getItem('cartItems')?.includes(id)){
+      return false;
+    }
+    else {
+      const newIdsString = localStorage.getItem('cartItems')+` ${id}`;
+      localStorage.setItem('cartItems', newIdsString);
+  
+      console.log('localStorage', localStorage.getItem('cartItems'));
+      return true;
+    }
   }
 }
 

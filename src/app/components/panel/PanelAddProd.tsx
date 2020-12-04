@@ -1,6 +1,6 @@
 import React from 'react';
 import DataOperations from '../content/filter/DataOperations';
-import { IItem } from '../content/views/sup.model';
+import { IItem } from '../content/sup-shop/views/sup.model';
 import './PanelAddProd.scss';
 
 interface IProps {
@@ -39,8 +39,7 @@ export default class PanelAddProd extends React.Component<IProps, IState>{
         }
     }
 
-    componentDidMount() {
-    }
+    componentDidMount() {}
 
     createInputs(){
         let newInputs: JSX.Element[] = [];

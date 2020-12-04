@@ -1,7 +1,6 @@
 import React from 'react';
 import DataOperations from '../content/filter/DataOperations';
-import ItemView from '../content/ItemView';
-import { IItem } from '../content/views/sup.model';
+import { IItem } from '../content/sup-shop/views/sup.model';
 import './PanelEditProd.scss';
 
 interface IProps {
@@ -16,7 +15,6 @@ interface IProps {
 
 interface IState {
     currItem: IItem,
-    panelEditInputs: JSX.Element[],
 }
 
 export default class PanelEditProd extends React.Component<IProps, IState>{
@@ -44,62 +42,61 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
                 length: 'string',
                 width: 'string',
             },
-            panelEditInputs: [],
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const dataOps = new DataOperations();
-        dataOps.getItem(this.props.match.params.id)
-            .then((item) => {
-                console.log('Edited item ', item);
-                const newItem: IItem = { ...item };
-                let inputs: JSX.Element[] = [];
-                let key: string;
-                for (key in item) {
-                    inputs.push(<input type="text" onChange={this.updateInput} 
-                        placeholder={key}
-                        className={`panel__edit-prod--${key}`}
-                        name={key}
-                        value={this.state.currItem[key]}/>);
-                }
-                this.setState({ 
-                    currItem: item,
-                    panelEditInputs: inputs
-                 });
-            });
+        const item = await dataOps.getItem(this.props.match.params.id);
+        this.setState({ currItem: item });
+    }
+
+    createInputs = (): JSX.Element[] => {
+        let newInputs: JSX.Element[] = [];
+        let key: string;
+        for (key in this.state.currItem) {
+            newInputs.push(<input type="text" onChange={(e) => this.updateInput(e)}
+                key={newInputs.length}
+                placeholder={key}
+                className={`panel__edit-input panel__add--${key}`}
+                name={key}
+                value={this.state.currItem[key]} />);
+        }
+        return newInputs;
     }
 
     updateInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        // console.log('Update from input.', this.state.currItem.qty);
-        // let newItem = {...this.state.currItem};
-        // type keyType = keyof IItem;
-        // const key: keyType = e.currentTarget.name as keyof IItem;
-        // let newValue: string | number = e.currentTarget.value;
-        // newItem.;
 
-        // this.setState({
-        //     currItem: newItem
-        // });
+        const key = e.currentTarget.name;
+
+        document.querySelector(`.panel__add--${key}`)?.classList.remove('required');
+
+        let newItem: IItem = this.state.currItem;
+        console.log('State item ', key, this.state.currItem);
+        newItem[key] = e.currentTarget.value;
+        console.log('newItem ', newItem);
+        this.setState(() => ({
+            currItem: newItem
+        }));
     }
 
     changeProduct = async (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        // const newItem: IItem = { ...this.state.currItem };
-        // const dataOps = new DataOperations();
-        // dataOps.editProduct(newItem);
+        const newItem: IItem = { ...this.state.currItem };
+        const dataOps = new DataOperations();
+        dataOps.editProduct(newItem);
     }
 
     render() {
         // console.log(this.state.currItem);
         return (
-            <div className="panel__add-prod">
-                <div className="panel__add-prod--title">
+            <div className="panel__edit-prod">
+                <div className="panel__edit-prod--title">
                     Edit product
             </div>
-                <form className="panel__add-prod--form">
+                <form className="panel__edit-prod--form">
 
-                    {this.state.panelEditInputs}
+                    {this.createInputs()}
 
                     {/* <input onChange={this.updateInput} name="name" value={this.state.currItem.title} type="text" className="panel__add-prod--name panel__add-prod--input" placeholder="Name" />
                     <textarea onChange={this.updateInput} name="description" value={this.state.currItem.description} className="panel__add-prod--desc panel__add-prod--input" rows={4} placeholder="Description"></textarea>
@@ -112,7 +109,7 @@ export default class PanelEditProd extends React.Component<IProps, IState>{
                     <input onChange={this.updateInput} name="connectors" value={this.state.currItem.connectors} type="text" className="panel__add-prod--connectors panel__add-prod--input" placeholder="Connectors" />
                     <input onChange={this.updateInput} name="shortStats" value={this.state.currItem.shortStats} type="text" className="panel__add-prod--price panel__add-prod--input" placeholder="Price" /> */}
 
-                    <input onClick={this.changeProduct} type="button" className="panel__add-prod--submit panel__add-prod--input" value="Change" />
+                    <input onClick={this.changeProduct} type="button" className="panel__edit-prod--submit panel__edit-prod--input" value="Change" />
 
                 </form>
             </div>

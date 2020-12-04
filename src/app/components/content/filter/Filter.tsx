@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './Filter.scss';
-import { IGpusModel, IFilterObject } from '../views/sup.model';
+import { IGpusModel, IFilterObject } from '../sup-shop/views/sup.model';
 
 interface FilterProps {
   data: Promise<IGpusModel>;

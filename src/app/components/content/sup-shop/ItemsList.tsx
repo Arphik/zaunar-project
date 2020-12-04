@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Filter from './filter/Filter';
+import Filter from '../filter/Filter';
 import './ItemsList.scss';
 
 import LargeBricksView from './views/LargeBricksView';
 import SmallBricksView from './views/SmallBricksView';
 import LargeListView from './views/LargeListView';
 import SmallListView from './views/SmallListView';
-import DataOperations from './filter/DataOperations';
+import DataOperations from '../filter/DataOperations';
 import { IItem } from './views/sup.model';
 
 interface ItemsListState {
@@ -24,8 +24,6 @@ export default class ItemsList extends Component<{}, ItemsListState> {
       view: 1,
       dataOperations: new DataOperations(),
     }
-
-    this.addToCart = this.addToCart.bind(this);
   }
 
   componentDidMount() {
@@ -42,17 +40,10 @@ export default class ItemsList extends Component<{}, ItemsListState> {
     })
   }
 
-  addToCart(id: string, i: number = 0): void {
-    const newIdsString = localStorage.getItem('cartItems')+` ${id}`;
-    localStorage.setItem('cartItems', newIdsString);
-
-    console.log('localStorage', localStorage.getItem('cartItems'));
-  }
-
   changeView = (choice: number): JSX.Element => {
     let newView = (<div></div>);
     switch (choice) {
-      case 1: newView = (<LargeBricksView data={this.state.data} toCart={this.addToCart} />);
+      case 1: newView = (<LargeBricksView data={this.state.data} />);
         break;
       case 2: newView = (<SmallBricksView data={this.state.data} />);
         break;

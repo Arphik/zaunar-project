@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Cart.scss';
-import DataOperations from './filter/DataOperations';
-import { IItem } from './views/sup.model';
+import DataOperations from '../../filter/DataOperations';
+import { IItem } from '../views/sup.model';
 
 interface IProps {
 
@@ -47,11 +47,10 @@ export default class Cart extends Component<IProps, IState> {
                         const newCartItems = data.map(({ id, title, description, qty, price }, index) => {
                             return (
                                 <div className="cart__item" key={index}>
-                                    <span className="cart__id">{id}</span>
                                     <span className="cart__title">{title}</span>
                                     <span className="cart__description">{description}</span>
-                                    <span className="cart__qty">{qty}</span>
-                                    <span className="cart__price">{price}</span>
+                                    input:text.
+                                    <span className="cart__price">{price} zł</span>
                                     <span className="cart__remove" onClick={() => this.removeFromCart(id)}>Remove</span>
                                 </div>
                             )
