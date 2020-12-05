@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ItemView.scss';
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, NavLink, Route, Switch } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import DataOperations from '../filter/DataOperations';
@@ -27,23 +27,23 @@ export default class ItemView extends Component<IProps, IState> {
     super(props);
     this.state = {
       item: {
-        id: 'string',
-        title: 'string',
-        description: 'string',
+        id: '',
+        title: '',
+        description: '',
         qty: 0,
-        sentTime: 'string',
+        sentTime: '',
         price: 0,
-        guarantee: 'string',
-        image: 'string',
-        producer: 'string',
-        type: 'string',
-        technology: 'string',
-        purpose: 'string',
-        oar: 'string',
-        handle: 'string',
-        thickness: 'string',
-        length: 'string',
-        width: 'string',
+        guarantee: '',
+        image: '',
+        producer: '',
+        type: '',
+        technology: '',
+        purpose: '',
+        oar: '',
+        handle: '',
+        thickness: '',
+        length: '',
+        width: '',
       }
     }
     // console.log("didMount data ", this.state.data);
@@ -93,11 +93,11 @@ export default class ItemView extends Component<IProps, IState> {
         <div className="item-view__fullinfo">
 
           <div className="item-view__infotabs">
-            <Link to={`/sup/${this.state.item.id}/info`} className="item-view__infotab">OPIS PRODUKTU</Link>
-            <Link to={`/sup/${this.state.item.id}/technicals`} className="item-view__infotab">DANE TECHNICZNE</Link>
-            <Link to={`/sup/${this.state.item.id}/opinions`} className="item-view__infotab">OPINIE KLIENTÓW</Link>
-            <Link to={`/sup/${this.state.item.id}/payment`} className="item-view__infotab">PŁATNOŚCI</Link>
-            <Link to={`/sup/${this.state.item.id}/shipment`} className="item-view__infotab">WYSYŁKA</Link>
+            <NavLink to={`/sup/${this.state.item.id}/info`} className="item-view__infotab" activeClassName="item-view__infotab--active">OPIS PRODUKTU</NavLink>
+            <NavLink to={`/sup/${this.state.item.id}/technicals`} className="item-view__infotab" activeClassName="item-view__infotab--active">DANE TECHNICZNE</NavLink>
+            <NavLink to={`/sup/${this.state.item.id}/opinions`} className="item-view__infotab" activeClassName="item-view__infotab--active">OPINIE KLIENTÓW</NavLink>
+            <NavLink to={`/sup/${this.state.item.id}/payment`} className="item-view__infotab" activeClassName="item-view__infotab--active">PŁATNOŚCI</NavLink>
+            <NavLink to={`/sup/${this.state.item.id}/shipment`} className="item-view__infotab" activeClassName="item-view__infotab--active">WYSYŁKA</NavLink>
           </div>
 
           <div className="item-view__infotab--content">

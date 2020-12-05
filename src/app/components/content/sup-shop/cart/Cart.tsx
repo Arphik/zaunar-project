@@ -49,7 +49,6 @@ export default class Cart extends Component<IProps, IState> {
                                 <div className="cart__item" key={index}>
                                     <span className="cart__title">{title}</span>
                                     <span className="cart__description">{description}</span>
-                                    input:text.
                                     <span className="cart__price">{price} zł</span>
                                     <span className="cart__remove" onClick={() => this.removeFromCart(id)}>Remove</span>
                                 </div>

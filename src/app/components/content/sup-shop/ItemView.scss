@@ -90,16 +90,19 @@
   height: 1000px;
 }
 .item-view__infotabs{
-  height: 30px;
+  height: 40px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.281);
+  display: flex;
 }
 .item-view__infotab{
   height: 100%;
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.315);
+  border-top: 1px solid rgba(0, 0, 0, 0.315);
+  border-left: 1px solid rgba(0, 0, 0, 0.315);
+  border-right: 1px solid rgba(0, 0, 0, 0.315);
 }
 .item-view__infotab--active{
-  border-bottom: 2px solid rgb(124, 0, 0);
+  border-bottom: 3px solid rgb(124, 0, 0);
 }
 .item-view__infotab--content{
   padding: 10px;
