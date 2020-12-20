@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(44, 0, 146);
+  background: rgb(255, 255, 255);
   transition: height .2s;
   position: absolute;
   transform: translateY(-40px);
@@ -36,21 +36,15 @@
     text-decoration: none;
     text-align: center;
     display: block;
-    color: rgb(255, 255, 255);
-    background: rgb(57, 0, 189);
+    color: rgb(0, 209, 0);
     &:hover {
-      background: rgb(95, 27, 255);
+      border-bottom: 1px solid black;
       text-decoration: none;
     }
   }
 }
 .navbar__link--a:visited {
   color: rgb(255, 255, 255);
-}
-.navbar__link--a:hover {
-  color: rgb(255, 255, 255);
-  background: rgb(255, 255, 255);
-  text-decoration: underline;
 }
 .navbar__link--a.active {
   color: rgb(0, 42, 53);

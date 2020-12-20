@@ -3,7 +3,7 @@ import './Header.scss';
 import HeaderMenu from './HeaderMenu';
 import HaburgerMenu from './HaburgerMenu';
 import {
-    Link
+    Link, Route, Switch
 } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,16 +32,22 @@ const Header: React.FC = () => {
             <div className="header__container2">
 
                 <div className="header__top-menu">
-                    <Link to="/sup" className="header__top-menu--link">
-                        <span className="header__top-menu--a">
-                            SUP SHOP
-                        </span>
-                    </Link>
-                    <Link to="/wood" className="header__top-menu--link">
-                        <span className="header__top-menu--a">
-                            WOODEN HANDMADES
-                        </span>
-                    </Link>
+                    <Switch>
+                        <Route exact path="/">
+                            <Link to="/sup" className="header__top-menu--link">
+                                <div className="header__button--bg header__top-menu--sup"></div>
+                                <span className="header__link--span">
+                                    DESKI SUP
+                                </span>
+                            </Link>
+                            <Link to="/wood" className="header__top-menu--link header__top-menu--wood">
+                                <div className="header__button--bg header__top-menu--wood"></div>
+                                <span className="header__link--span">
+                                    WYROBY DREWNIANE
+                                </span>
+                            </Link>
+                        </Route>
+                    </Switch>
                     <HaburgerMenu />
                 </div>
 

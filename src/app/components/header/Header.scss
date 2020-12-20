@@ -76,29 +76,55 @@
     }
 
 
-    .header__container2{
-        width: 80%;
-        height: 30%;
-        padding: 10px 0;
-        margin: 0 auto;
-    }
-.header__top-menu{
-    height: 100%;
+.header__container2{
+    height: auto;
+    padding: 10px 0;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    
+}
+.header__top-menu{
+    width: 100%;
+    height: 70vh;
+    padding: 1% 2%;
+    padding-left: 10%;
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 }
 .header__top-menu--link{
-    flex: 1;
+    width: 40%;
+    height: 100%;
     padding: 1%;
-    margin: 2%;
+    margin: 1%;
+    position: relative;
     border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    &:hover{
-        background-color: black;
-        color: white;
+    &:hover > .header__button--bg{
+        opacity: 1;
     }
+    &:nth-child(1) > .header__button--bg{
+        background: url('/assets/supsBtn.jpg') no-repeat center/cover; 
+    }
+    &:nth-child(2) > .header__button--bg{
+        background: url('/assets/woodsBtn.jpg') no-repeat center/cover;
+    }
+}
+.header__button--bg{
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    position: absolute;
+    z-index: 1;
+}
+.header__link--span{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 2;
 }

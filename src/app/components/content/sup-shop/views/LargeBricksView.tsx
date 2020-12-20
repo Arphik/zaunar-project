@@ -24,7 +24,7 @@ const LargeBricksView = ({ data }: ViewProps): JSX.Element => {
         <img className="large-bricks__image" src={`./assets/${image}`} alt="" />
       </Link>
 
-  <span className="large-bricks__title">{title}</span>
+    <span className="large-bricks__title">{title}</span>
 
       <div className="large-bricks__desc">
         <div className="large-bricks__short-stats">

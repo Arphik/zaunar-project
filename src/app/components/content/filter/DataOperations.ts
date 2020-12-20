@@ -10,11 +10,13 @@ interface IDataOperations {
 }
 
 export default class DataOperations implements IDataOperations {
+  url: string;
   mod: RequestMode;
   fetchOpts: RequestInit;
 
   constructor() {
-    
+
+    this.url = 'https://shop-sup-wood.herokuapp.com/products';
     this.mod = 'cors';
     this.fetchOpts = {
       method: 'GET',
@@ -30,7 +32,7 @@ export default class DataOperations implements IDataOperations {
   async getFullData(): Promise<IItem[]> {
     try {
       const response = await fetch(
-        'http://localhost:3000/products',
+        this.url,
         this.fetchOpts,
       );
       const data = await response.json();
@@ -46,7 +48,7 @@ export default class DataOperations implements IDataOperations {
     // console.log("DataOps getItem ID ", id);
     try {
       const response = await fetch(
-        `http://localhost:3000/products/${id}`,
+        `${this.url}/${id}`,
         this.fetchOpts,
       );
       const item = await response.json();
@@ -56,9 +58,24 @@ export default class DataOperations implements IDataOperations {
     }
   }
 
-  async addProduct(data: IItem){
+  async getSelectedItems(id: string[]): Promise<IItem[]>{
+    let items: IItem[] = [];
+    for(let i = 0; i < id.length; i++){
+      try {
+        const response = await fetch(
+          `${this.url}/${id[i]}`,
+          this.fetchOpts,
+        );
+        const item: IItem = await response.json();
+        items.push(item);
+      } catch (error) {
+        throw error;
+      }
+    }
+    return items;
+  }
 
-    const url = 'http://localhost:3000/products';
+  async addProduct(data: IItem){
 
     const mode: RequestMode = 'cors';
 
@@ -74,7 +91,7 @@ export default class DataOperations implements IDataOperations {
     };
     try {
       console.log('Fetch add product ', data);
-        const response = await fetch(url, fetchOpts);
+        const response = await fetch(this.url, fetchOpts);
         console.log('Fetch response ', response.body);
         return response;
     } catch (error) {
@@ -83,8 +100,6 @@ export default class DataOperations implements IDataOperations {
   }
 
   async editProduct(data: IItem){
-
-    const url = 'http://localhost:3000/products';
 
     const mode: RequestMode = 'cors';
     const fetchOpts = {
@@ -99,7 +114,7 @@ export default class DataOperations implements IDataOperations {
     };
     try {
         console.log('Fetch edit product ', data);
-        const response = await fetch(url, fetchOpts);
+        const response = await fetch(this.url, fetchOpts);
         console.log('Fetch response ', response.body);
         return response;
     } catch (error) {
@@ -120,7 +135,7 @@ export default class DataOperations implements IDataOperations {
     };
 
     try {
-      return fetch(`http://localhost:3000/products/${id}`, fetchOpts);
+      return fetch(`${this.url}/${id}`, fetchOpts);
     } catch (error) {
       throw error;
     }
