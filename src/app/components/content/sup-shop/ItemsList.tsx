@@ -71,12 +71,13 @@ export default class ItemsList extends Component<{}, ItemsListState> {
 
         <div className="items-list">
           <div className="items-list__change-view--container">
-            <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(() => ({ view: 1 }))}></div>
+            {/* <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(() => ({ view: 1 }))}></div>
             <div className="items-list__change-view--btn smallBricks" onClick={() => this.setState(() => ({ view: 2 }))}></div>
             <div className="items-list__change-view--btn largeList" onClick={() => this.setState(() => ({ view: 3 }))}></div>
-            <div className="items-list__change-view--btn smallList" onClick={() => this.setState(() => ({ view: 4 }))}></div>
+            <div className="items-list__change-view--btn smallList" onClick={() => this.setState(() => ({ view: 4 }))}></div> */}
           </div>
-          {this.changeView(this.state.view)}
+          {/* {this.changeView(this.state.view)} */}
+          <LargeBricksView data={this.state.data} />
         </div>
       </div>
     )

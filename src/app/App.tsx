@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import Header from './components/header/Header';
-import Promotions from './components/promotions/Promotions';
+import Promotions from './components/content/promotions/Promotions';
 
 import {
   BrowserRouter as Router,
