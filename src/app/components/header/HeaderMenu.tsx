@@ -14,7 +14,7 @@ const HeaderMenu: React.FC = () => {
             <Link to="/panel" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon className="header__link--icon" icon={faHeadset} />
-                    <span className="header__link--text">Support and contact</span>
+                    <span className="header__link--text">Wsparcie i kontakt</span>
                 </div>
             </Link>
             <span className="header__separator"></span>
@@ -33,7 +33,7 @@ const HeaderMenu: React.FC = () => {
             <Link to="/cart" className="header__link">
                 <div className="header__link-content">
                     <FontAwesomeIcon icon={faShoppingCart} />
-                    <span className="header__link--text">Cart</span>
+                    <span className="header__link--text">Koszyk</span>
                 </div>
             </Link>
         </nav>

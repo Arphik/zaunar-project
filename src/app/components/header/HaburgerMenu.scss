@@ -20,7 +20,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: rgb(255, 255, 255);
   transition: height .2s;
@@ -43,10 +43,7 @@
     }
   }
 }
-.navbar__link--a:visited {
-  color: rgb(255, 255, 255);
-}
-.navbar__link--a.active {
+.navbar__link--active {
   color: rgb(0, 42, 53);
   text-decoration: underline;
   background: rgb(179, 178, 255);

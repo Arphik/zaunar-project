@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                 </Link>
 
                 <div className="header__search">
-                    <input type="text" name="" id="" className="header__search--input" placeholder="What are you searching?" />
+                    <input type="text" name="" id="" className="header__search--input" placeholder="Czego szukasz?" />
                     <button className="header__search--button"><FontAwesomeIcon icon={faSearch} /></button>
                 </div>
 

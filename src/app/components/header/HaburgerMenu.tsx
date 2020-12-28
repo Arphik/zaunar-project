@@ -1,13 +1,24 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Link
+    NavLink
 } from "react-router-dom";
 import './HaburgerMenu.scss';
+import { matchPath, useParams } from "react-router";
 
+type IState = {
+    match: {
+      isExact: boolean,
+      params: {
+        id: string
+      },
+    },
+  }
+
+  
 const HaburgerMenu = () => {
 
-    // console.log(Menu);
+    const params = useParams();
+    console.log('Match', params);
 
     return (
         <nav className="navbar">
@@ -18,16 +29,16 @@ const HaburgerMenu = () => {
             <div className="navbar__content">
 
                 <div className="navbar__link" >
-                    <Link to="/products" className="navbar__link--a">Products</Link>
+                    <NavLink to="/products" className="navbar__link--a">Produkty</NavLink>
                 </div>
                 <div className="navbar__link" >
-                <Link to="/blog" className="navbar__link--a">Blog</Link>
+                <NavLink to="/blog" className="navbar__link--a">Blog</NavLink>
                 </div>
                 <div className="navbar__link" >
-                <Link to="/about" className="navbar__link--a">About</Link>
+                <NavLink to="/about" className="navbar__link--a">O nas</NavLink>
                 </div>
                 <div className="navbar__link" >
-                <Link to="/contact" className="navbar__link--a">Contact</Link>
+                <NavLink to="/contact" className="navbar__link--a">Kontakt</NavLink>
                 </div>
             </div>
         </nav>

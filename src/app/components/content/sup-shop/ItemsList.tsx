@@ -8,6 +8,8 @@ import LargeListView from './views/LargeListView';
 import SmallListView from './views/SmallListView';
 import DataOperations from '../filter/DataOperations';
 import { IItem } from './views/sup.model';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
 interface ItemsListState {
   data: IItem[];
@@ -21,7 +23,7 @@ export default class ItemsList extends Component<{}, ItemsListState> {
     super(props);
     this.state = {
       data: [],
-      view: 1,
+      view: 0,
       dataOperations: new DataOperations(),
     }
   }
@@ -40,19 +42,14 @@ export default class ItemsList extends Component<{}, ItemsListState> {
     })
   }
 
-  changeView = (choice: number): JSX.Element => {
-    let newView = (<div></div>);
-    switch (choice) {
-      case 1: newView = (<LargeBricksView data={this.state.data} />);
-        break;
-      case 2: newView = (<SmallBricksView data={this.state.data} />);
-        break;
-      case 3: newView = (<LargeListView data={this.state.data} />);
-        break;
-      case 4: newView = (<SmallListView data={this.state.data} />);
-        break;
-    }
-    return newView;
+  changeView = (): JSX.Element => {
+    const views: JSX.Element[] = [
+      <LargeBricksView data={this.state.data} />,
+      <SmallBricksView data={this.state.data} />,
+      <LargeListView data={this.state.data} />,
+      <SmallListView data={this.state.data} />
+    ]
+    return views[this.state.view];
   }
 
   changeFilteredData = (filter: any): void => {
@@ -71,13 +68,24 @@ export default class ItemsList extends Component<{}, ItemsListState> {
 
         <div className="items-list">
           <div className="items-list__change-view--container">
-            {/* <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(() => ({ view: 1 }))}></div>
-            <div className="items-list__change-view--btn smallBricks" onClick={() => this.setState(() => ({ view: 2 }))}></div>
-            <div className="items-list__change-view--btn largeList" onClick={() => this.setState(() => ({ view: 3 }))}></div>
-            <div className="items-list__change-view--btn smallList" onClick={() => this.setState(() => ({ view: 4 }))}></div> */}
+            <div className="items-list__change-view--btn largeBricks" onClick={() => this.setState(() => ({ view: 0 }))}></div>
+            <div className="items-list__change-view--btn smallBricks" onClick={() => this.setState(() => ({ view: 1 }))}></div>
+            <div className="items-list__change-view--btn largeList" onClick={() => this.setState(() => ({ view: 2 }))}></div>
+            <div className="items-list__change-view--btn smallList" onClick={() => this.setState(() => ({ view: 3 }))}></div>
           </div>
           {/* {this.changeView(this.state.view)} */}
-          <LargeBricksView data={this.state.data} />
+          { 
+            this.state.data.length > 0 ? 
+            this.changeView()
+            : 
+            (
+              <div className="items-list__loading-gif">
+                Loading data
+                  <FontAwesomeIcon icon={faRedo} />
+              </div>
+            ) 
+          }
+          
         </div>
       </div>
     )
